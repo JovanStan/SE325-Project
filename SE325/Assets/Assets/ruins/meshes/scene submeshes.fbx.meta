@@ -1,0 +1,581 @@
+fileFormatVersion: 2
+guid: 76de421ad8d87884f9c847d6ebf5b290
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: bench_Layer3
+    100002: bench_Layer3 (2)
+    100004: Camera
+    100006: cube199
+    100008: cube199 (2)
+    100010: cube202
+    100012: cube202 (2)
+    100014: cube203
+    100016: cube203 (2)
+    100018: cube204
+    100020: cube204 (2)
+    100022: cube205
+    100024: cube205 (2)
+    100026: cube207
+    100028: cube207 (2)
+    100030: cube212
+    100032: cube212 (2)
+    100034: cube238
+    100036: cube238 (2)
+    100038: cube239
+    100040: cube239 (2)
+    100042: cube240
+    100044: cube240 (2)
+    100046: cube241
+    100048: cube241 (2)
+    100050: cube242
+    100052: cube242 (2)
+    100054: cube243
+    100056: cube243 (2)
+    100058: cube244
+    100060: cube244 (2)
+    100062: cube245
+    100064: cube245 (2)
+    100066: cube246
+    100068: cube246 (2)
+    100070: cube247
+    100072: cube247 (2)
+    100074: cube248
+    100076: cube248 (2)
+    100078: cube249
+    100080: cube249 (2)
+    100082: cube250
+    100084: cube250 (2)
+    100086: cube251
+    100088: cube251 (2)
+    100090: cube252
+    100092: cube252 (2)
+    100094: cube253
+    100096: cube253 (2)
+    100098: cube254
+    100100: cube254 (2)
+    100102: cube255
+    100104: cube255 (2)
+    100106: default9
+    100108: default9 (2)
+    100110: Default_Layer25
+    100112: Default_Layer25 (2)
+    100114: Default_Layer26
+    100116: Default_Layer26 (2)
+    100118: Default_Layer27
+    100120: Default_Layer27 (2)
+    100122: Default_Layer29
+    100124: Default_Layer29 (2)
+    100126: Directional Light
+    100128: ec_sewer_Layer1
+    100130: ec_sewer_Layer1 (2)
+    100132: ec_sewer_Layer2
+    100134: ec_sewer_Layer2 (2)
+    100136: ec_sewer_Layer3
+    100138: ec_sewer_Layer3 (2)
+    100140: ec_sewer_Layer4
+    100142: ec_sewer_Layer4 (2)
+    100144: ec_sewer_Layer5
+    100146: ec_sewer_Layer5 (2)
+    100148: lantern_Layer1
+    100150: lantern_Layer1 (2)
+    100152: lantern_Layer2
+    100154: lantern_Layer2 (2)
+    100156: lantern_Layer3
+    100158: lantern_Layer3 (2)
+    100160: pillar_Layer1
+    100162: pillar_Layer1 (2)
+    100164: pillar_Layer2
+    100166: pillar_Layer2 (2)
+    100168: pillar_Layer3
+    100170: pillar_Layer3 (2)
+    100172: pillar_Layer4
+    100174: pillar_Layer4 (2)
+    100176: polymsh
+    100178: polymsh (2)
+    100180: polymsh18
+    100182: polymsh18 (2)
+    100184: polymsh23
+    100186: polymsh23 (2)
+    100188: polymsh24
+    100190: polymsh24 (2)
+    100192: polymsh27
+    100194: polymsh27 (2)
+    100196: polymsh28
+    100198: polymsh28 (2)
+    100200: polymsh35
+    100202: polymsh35 (2)
+    100204: polymsh36
+    100206: polymsh36 (2)
+    100208: polymsh37
+    100210: polymsh37 (2)
+    100212: polymsh40
+    100214: polymsh40 (2)
+    100216: polymsh61
+    100218: polymsh61 (2)
+    100220: polymsh62
+    100222: polymsh62 (2)
+    100224: polymsh63
+    100226: polymsh63 (2)
+    100228: polymsh64
+    100230: polymsh64 (2)
+    100232: polymsh65
+    100234: polymsh65 (2)
+    100236: polymsh66
+    100238: polymsh66 (2)
+    100240: polymsh67
+    100242: polymsh67 (2)
+    100244: polymsh68
+    100246: polymsh68 (2)
+    100248: polymsh69
+    100250: polymsh69 (2)
+    100252: polymsh70
+    100254: polymsh70 (2)
+    100256: polymsh71
+    100258: polymsh71 (2)
+    100260: polymsh72
+    100262: polymsh72 (2)
+    100264: polymsh73
+    100266: polymsh73 (2)
+    100268: polymsh74
+    100270: polymsh74 (2)
+    100272: polymsh75
+    100274: polymsh75 (2)
+    100276: polymsh76
+    100278: polymsh76 (2)
+    100280: polymsh_detached19
+    100282: polymsh_detached19 (2)
+    100284: polymsh_detached5
+    100286: polymsh_detached5 (2)
+    100288: polymsh_extracted11
+    100290: polymsh_extracted11 (2)
+    100292: polymsh_extracted19
+    100294: polymsh_extracted19 (2)
+    100296: polymsh_extracted28
+    100298: polymsh_extracted28 (2)
+    100300: polymsh_extracted49
+    100302: polymsh_extracted49 (2)
+    100304: polymsh_extracted50
+    100306: polymsh_extracted50 (2)
+    100308: polymsh_extracted50_ncl1_1
+    100310: polymsh_extracted50_ncl1_1 (2)
+    100312: polymsh_extracted51
+    100314: polymsh_extracted51 (2)
+    100316: polymsh_extracted53
+    100318: polymsh_extracted53 (2)
+    100320: polymsh_extracted6
+    100322: polymsh_extracted6 (2)
+    100324: polymsh_extracted70
+    100326: polymsh_extracted70 (2)
+    100328: polymsh_extracted71
+    100330: polymsh_extracted71 (2)
+    100332: polymsh_extracted76
+    100334: polymsh_extracted76 (2)
+    100336: //RootNode
+    100338: shutt20
+    100340: shutt20 (2)
+    400000: bench_Layer3
+    400002: bench_Layer3 (2)
+    400004: Camera
+    400006: cube199
+    400008: cube199 (2)
+    400010: cube202
+    400012: cube202 (2)
+    400014: cube203
+    400016: cube203 (2)
+    400018: cube204
+    400020: cube204 (2)
+    400022: cube205
+    400024: cube205 (2)
+    400026: cube207
+    400028: cube207 (2)
+    400030: cube212
+    400032: cube212 (2)
+    400034: cube238
+    400036: cube238 (2)
+    400038: cube239
+    400040: cube239 (2)
+    400042: cube240
+    400044: cube240 (2)
+    400046: cube241
+    400048: cube241 (2)
+    400050: cube242
+    400052: cube242 (2)
+    400054: cube243
+    400056: cube243 (2)
+    400058: cube244
+    400060: cube244 (2)
+    400062: cube245
+    400064: cube245 (2)
+    400066: cube246
+    400068: cube246 (2)
+    400070: cube247
+    400072: cube247 (2)
+    400074: cube248
+    400076: cube248 (2)
+    400078: cube249
+    400080: cube249 (2)
+    400082: cube250
+    400084: cube250 (2)
+    400086: cube251
+    400088: cube251 (2)
+    400090: cube252
+    400092: cube252 (2)
+    400094: cube253
+    400096: cube253 (2)
+    400098: cube254
+    400100: cube254 (2)
+    400102: cube255
+    400104: cube255 (2)
+    400106: default9
+    400108: default9 (2)
+    400110: Default_Layer25
+    400112: Default_Layer25 (2)
+    400114: Default_Layer26
+    400116: Default_Layer26 (2)
+    400118: Default_Layer27
+    400120: Default_Layer27 (2)
+    400122: Default_Layer29
+    400124: Default_Layer29 (2)
+    400126: Directional Light
+    400128: ec_sewer_Layer1
+    400130: ec_sewer_Layer1 (2)
+    400132: ec_sewer_Layer2
+    400134: ec_sewer_Layer2 (2)
+    400136: ec_sewer_Layer3
+    400138: ec_sewer_Layer3 (2)
+    400140: ec_sewer_Layer4
+    400142: ec_sewer_Layer4 (2)
+    400144: ec_sewer_Layer5
+    400146: ec_sewer_Layer5 (2)
+    400148: lantern_Layer1
+    400150: lantern_Layer1 (2)
+    400152: lantern_Layer2
+    400154: lantern_Layer2 (2)
+    400156: lantern_Layer3
+    400158: lantern_Layer3 (2)
+    400160: pillar_Layer1
+    400162: pillar_Layer1 (2)
+    400164: pillar_Layer2
+    400166: pillar_Layer2 (2)
+    400168: pillar_Layer3
+    400170: pillar_Layer3 (2)
+    400172: pillar_Layer4
+    400174: pillar_Layer4 (2)
+    400176: polymsh
+    400178: polymsh (2)
+    400180: polymsh18
+    400182: polymsh18 (2)
+    400184: polymsh23
+    400186: polymsh23 (2)
+    400188: polymsh24
+    400190: polymsh24 (2)
+    400192: polymsh27
+    400194: polymsh27 (2)
+    400196: polymsh28
+    400198: polymsh28 (2)
+    400200: polymsh35
+    400202: polymsh35 (2)
+    400204: polymsh36
+    400206: polymsh36 (2)
+    400208: polymsh37
+    400210: polymsh37 (2)
+    400212: polymsh40
+    400214: polymsh40 (2)
+    400216: polymsh61
+    400218: polymsh61 (2)
+    400220: polymsh62
+    400222: polymsh62 (2)
+    400224: polymsh63
+    400226: polymsh63 (2)
+    400228: polymsh64
+    400230: polymsh64 (2)
+    400232: polymsh65
+    400234: polymsh65 (2)
+    400236: polymsh66
+    400238: polymsh66 (2)
+    400240: polymsh67
+    400242: polymsh67 (2)
+    400244: polymsh68
+    400246: polymsh68 (2)
+    400248: polymsh69
+    400250: polymsh69 (2)
+    400252: polymsh70
+    400254: polymsh70 (2)
+    400256: polymsh71
+    400258: polymsh71 (2)
+    400260: polymsh72
+    400262: polymsh72 (2)
+    400264: polymsh73
+    400266: polymsh73 (2)
+    400268: polymsh74
+    400270: polymsh74 (2)
+    400272: polymsh75
+    400274: polymsh75 (2)
+    400276: polymsh76
+    400278: polymsh76 (2)
+    400280: polymsh_detached19
+    400282: polymsh_detached19 (2)
+    400284: polymsh_detached5
+    400286: polymsh_detached5 (2)
+    400288: polymsh_extracted11
+    400290: polymsh_extracted11 (2)
+    400292: polymsh_extracted19
+    400294: polymsh_extracted19 (2)
+    400296: polymsh_extracted28
+    400298: polymsh_extracted28 (2)
+    400300: polymsh_extracted49
+    400302: polymsh_extracted49 (2)
+    400304: polymsh_extracted50
+    400306: polymsh_extracted50 (2)
+    400308: polymsh_extracted50_ncl1_1
+    400310: polymsh_extracted50_ncl1_1 (2)
+    400312: polymsh_extracted51
+    400314: polymsh_extracted51 (2)
+    400316: polymsh_extracted53
+    400318: polymsh_extracted53 (2)
+    400320: polymsh_extracted6
+    400322: polymsh_extracted6 (2)
+    400324: polymsh_extracted70
+    400326: polymsh_extracted70 (2)
+    400328: polymsh_extracted71
+    400330: polymsh_extracted71 (2)
+    400332: polymsh_extracted76
+    400334: polymsh_extracted76 (2)
+    400336: //RootNode
+    400338: shutt20
+    400340: shutt20 (2)
+    4300000: Default_Layer25 (2)
+    4300002: Default_Layer26 (2)
+    4300004: Default_Layer27 (2)
+    4300006: Default_Layer29 (2)
+    4300008: bench_Layer3 (2)
+    4300010: polymsh_detached5 (2)
+    4300012: shutt20 (2)
+    4300014: polymsh18 (2)
+    4300016: cube199 (2)
+    4300018: cube202 (2)
+    4300020: cube203 (2)
+    4300022: cube204 (2)
+    4300024: cube205 (2)
+    4300026: cube212 (2)
+    4300028: cube207 (2)
+    4300030: cube238 (2)
+    4300032: cube239 (2)
+    4300034: cube240 (2)
+    4300036: cube241 (2)
+    4300038: cube242 (2)
+    4300040: cube243 (2)
+    4300042: cube244 (2)
+    4300044: cube245 (2)
+    4300046: cube246 (2)
+    4300048: cube247 (2)
+    4300050: cube248 (2)
+    4300052: cube249 (2)
+    4300054: cube250 (2)
+    4300056: cube251 (2)
+    4300058: cube252 (2)
+    4300060: cube253 (2)
+    4300062: cube254 (2)
+    4300064: cube255 (2)
+    4300066: polymsh23 (2)
+    4300068: polymsh24 (2)
+    4300070: polymsh27 (2)
+    4300072: polymsh28 (2)
+    4300074: polymsh40 (2)
+    4300076: polymsh35 (2)
+    4300078: polymsh_extracted28 (2)
+    4300080: pillar_Layer1 (2)
+    4300082: pillar_Layer2 (2)
+    4300084: pillar_Layer3 (2)
+    4300086: lantern_Layer1 (2)
+    4300088: lantern_Layer2 (2)
+    4300090: polymsh_detached19 (2)
+    4300092: lantern_Layer3 (2)
+    4300094: pillar_Layer4 (2)
+    4300096: polymsh36 (2)
+    4300098: polymsh37 (2)
+    4300100: ec_sewer_Layer1 (2)
+    4300102: ec_sewer_Layer2 (2)
+    4300104: ec_sewer_Layer3 (2)
+    4300106: ec_sewer_Layer4 (2)
+    4300108: ec_sewer_Layer5 (2)
+    4300110: default9 (2)
+    4300112: polymsh_extracted50 (2)
+    4300114: polymsh_extracted51 (2)
+    4300116: polymsh_extracted53 (2)
+    4300118: polymsh61 (2)
+    4300120: polymsh62 (2)
+    4300122: polymsh63 (2)
+    4300124: polymsh64 (2)
+    4300126: polymsh_extracted6 (2)
+    4300128: polymsh_extracted11 (2)
+    4300130: polymsh_extracted19 (2)
+    4300132: polymsh_extracted49 (2)
+    4300134: polymsh_extracted50_ncl1_1 (2)
+    4300136: polymsh65 (2)
+    4300138: polymsh66 (2)
+    4300140: polymsh67 (2)
+    4300142: polymsh68 (2)
+    4300144: polymsh69 (2)
+    4300146: polymsh70 (2)
+    4300148: polymsh71 (2)
+    4300150: polymsh72 (2)
+    4300152: polymsh73 (2)
+    4300154: polymsh_extracted76 (2)
+    4300156: polymsh74 (2)
+    4300158: polymsh_extracted70 (2)
+    4300160: polymsh_extracted71 (2)
+    4300162: polymsh75 (2)
+    4300164: polymsh (2)
+    4300166: polymsh76 (2)
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: bench_Layer3 (2)
+    13700002: cube199 (2)
+    13700004: cube202 (2)
+    13700006: cube203 (2)
+    13700008: cube204 (2)
+    13700010: cube205 (2)
+    13700012: cube207 (2)
+    13700014: cube212 (2)
+    13700016: cube238 (2)
+    13700018: cube239 (2)
+    13700020: cube240 (2)
+    13700022: cube241 (2)
+    13700024: cube242 (2)
+    13700026: cube243 (2)
+    13700028: cube244 (2)
+    13700030: cube245 (2)
+    13700032: cube246 (2)
+    13700034: cube247 (2)
+    13700036: cube248 (2)
+    13700038: cube249 (2)
+    13700040: cube250 (2)
+    13700042: cube251 (2)
+    13700044: cube252 (2)
+    13700046: cube253 (2)
+    13700048: cube254 (2)
+    13700050: cube255 (2)
+    13700052: default9 (2)
+    13700054: Default_Layer25 (2)
+    13700056: Default_Layer26 (2)
+    13700058: Default_Layer27 (2)
+    13700060: Default_Layer29 (2)
+    13700062: ec_sewer_Layer1 (2)
+    13700064: ec_sewer_Layer2 (2)
+    13700066: ec_sewer_Layer3 (2)
+    13700068: ec_sewer_Layer4 (2)
+    13700070: ec_sewer_Layer5 (2)
+    13700072: lantern_Layer1 (2)
+    13700074: lantern_Layer2 (2)
+    13700076: lantern_Layer3 (2)
+    13700078: pillar_Layer1 (2)
+    13700080: pillar_Layer2 (2)
+    13700082: pillar_Layer3 (2)
+    13700084: pillar_Layer4 (2)
+    13700086: polymsh (2)
+    13700088: polymsh18 (2)
+    13700090: polymsh23 (2)
+    13700092: polymsh24 (2)
+    13700094: polymsh27 (2)
+    13700096: polymsh28 (2)
+    13700098: polymsh35 (2)
+    13700100: polymsh36 (2)
+    13700102: polymsh37 (2)
+    13700104: polymsh40 (2)
+    13700106: polymsh61 (2)
+    13700108: polymsh62 (2)
+    13700110: polymsh63 (2)
+    13700112: polymsh64 (2)
+    13700114: polymsh65 (2)
+    13700116: polymsh66 (2)
+    13700118: polymsh67 (2)
+    13700120: polymsh68 (2)
+    13700122: polymsh69 (2)
+    13700124: polymsh70 (2)
+    13700126: polymsh71 (2)
+    13700128: polymsh72 (2)
+    13700130: polymsh73 (2)
+    13700132: polymsh74 (2)
+    13700134: polymsh75 (2)
+    13700136: polymsh76 (2)
+    13700138: polymsh_detached19 (2)
+    13700140: polymsh_detached5 (2)
+    13700142: polymsh_extracted11 (2)
+    13700144: polymsh_extracted19 (2)
+    13700146: polymsh_extracted28 (2)
+    13700148: polymsh_extracted49 (2)
+    13700150: polymsh_extracted50 (2)
+    13700152: polymsh_extracted50_ncl1_1 (2)
+    13700154: polymsh_extracted51 (2)
+    13700156: polymsh_extracted53 (2)
+    13700158: polymsh_extracted6 (2)
+    13700160: polymsh_extracted70 (2)
+    13700162: polymsh_extracted71 (2)
+    13700164: polymsh_extracted76 (2)
+    13700166: shutt20 (2)
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 0
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 40
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
