@@ -8,9 +8,11 @@ using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
-	public AudioMixer audioMixer;
+	public AudioMixer audioMixer, buttonMixer;
 	Resolution[] resolutions;
 	public TMP_Dropdown resolutionDropdown;
+
+	public AudioSource sfx;
 
 	private void Start()
 	{
@@ -48,6 +50,11 @@ public class MainMenu : MonoBehaviour
 		audioMixer.SetFloat("volume", value);
 	}
 
+	public void SetButtonVolume(float volume)
+	{
+		buttonMixer.SetFloat("buttonVolume", volume);
+	}
+
 	public void SetQuality(int index)
 	{
 		QualitySettings.SetQualityLevel(index);
@@ -58,7 +65,10 @@ public class MainMenu : MonoBehaviour
 		Screen.fullScreen = isFullscreen;
 	}
 
-
+	public void PlaySfx()
+	{
+		sfx.Play();
+	}
 
 	public void LoadNewGame()
 	{
