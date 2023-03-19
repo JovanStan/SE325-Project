@@ -9,6 +9,7 @@ public class PlayerAttack : MonoBehaviour
 	public float damage = 20f;
 
 	private Animator anim;
+	public Camera cam;
 
 	//[SerializeField]
 	//private GameObject muzzleFlash;
@@ -31,8 +32,14 @@ public class PlayerAttack : MonoBehaviour
 		{
 			anim.SetTrigger("shoot");
 			fireTimer = Time.time + 1f / fireRate;
-			//fire bullet
+
+			RaycastHit hit;
+			if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit))
+			{
+				Debug.Log("WE hit " + hit.transform.gameObject.name);
+			}
 
 		}
 	}
+
 }

@@ -143,6 +143,11 @@ MonoBehaviour:
   zoom: 30
   normal: 45
   smooth: 5
+--- !u!20 &934604777 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1419949664292725622, guid: ec233c87a4913c440acb7e6d5d94aeb2, type: 3}
+  m_PrefabInstance: {fileID: 1419949663913166466}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1029319651 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1934166905406390766, guid: ec233c87a4913c440acb7e6d5d94aeb2, type: 3}
@@ -162,6 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: 15
   damage: 20
+  cam: {fileID: 934604777}
 --- !u!1 &1666725161
 GameObject:
   m_ObjectHideFlags: 0
