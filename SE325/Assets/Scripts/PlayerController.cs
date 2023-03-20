@@ -21,7 +21,8 @@ public class PlayerController : MonoBehaviour
     private float crouchHeight = 1f;
     private bool isCrouching = false;
 
-
+    private float sprintStamina = 100f;
+    private float sprintStaminaSpent = 10f;
 
     private void Awake()
 	{
@@ -71,33 +72,67 @@ public class PlayerController : MonoBehaviour
 
     private void Sprint()
 	{
-        if(Input.GetKeyDown(KeyCode.LeftShift) && !isCrouching)
-		{
-            speed = sprintSpeed;
-		}
+        if (sprintStamina > 0f)
+        {
+            if (Input.GetKeyDown(KeyCode.LeftShift) && !isCrouching)
+            {
+                speed = sprintSpeed;
+            }
+        }
 
 		if (Input.GetKeyUp(KeyCode.LeftShift) && !isCrouching)
 		{
 			speed = moveSpeed;
 		}
+
+
+        // trosi staminu dok drzimo shift
+        if(Input.GetKey(KeyCode.LeftShift) && !isCrouching)
+		{
+            sprintStamina -= sprintStaminaSpent * Time.deltaTime;
+            PlayerStats.instance.DisplayStamina(sprintStamina);
+            if (sprintStamina <= 0)
+			{
+                sprintStamina = 0f;
+                speed = moveSpeed;
+			}
+		}
+		else
+		{
+            if(sprintStamina != 100f)
+			{
+                sprintStamina += (sprintStaminaSpent / 2) * Time.deltaTime;
+                PlayerStats.instance.DisplayStamina(sprintStamina);
+
+                if(sprintStamina > 100f)
+				{
+                    sprintStamina = 100f;
+				}
+			}
+		}
 	}
 
     private void Crouch()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKey(KeyCode.C))
         {
             if (!isCrouching)
             {
                 cameraTransform.localPosition = new Vector3(0f, crouchHeight, 0f);
                 speed = crouchSpeed;
                 isCrouching = true;
-            }
-            else
-            {
+            } 
+        }
+
+		if (Input.GetKeyUp(KeyCode.C))
+		{
+			if (isCrouching)
+			{
                 cameraTransform.localPosition = new Vector3(0f, standHeight, 0f);
                 speed = moveSpeed;
                 isCrouching = false;
             }
-        }
+		}
+
     }
 }

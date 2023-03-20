@@ -10,7 +10,7 @@ public class MouseLook : MonoBehaviour
     [SerializeField]
     private float sensitivity = 5f;
 
-    private Vector2 lookLimits = new Vector2(-70, 80f);
+    private Vector2 lookLimits = new Vector2(-70f, 80f);
     private Vector2 lookAngles;
     private Vector2 currentMouseLook;
 

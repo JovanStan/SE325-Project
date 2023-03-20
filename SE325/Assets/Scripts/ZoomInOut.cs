@@ -15,7 +15,7 @@ public class ZoomInOut : MonoBehaviour
 
 	private void Awake()
 	{
-		cam = GetComponent<Camera>();
+		cam = GetComponentInChildren<Camera>();
 	}
 
 
