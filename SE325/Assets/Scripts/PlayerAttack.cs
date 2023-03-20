@@ -12,6 +12,10 @@ public class PlayerAttack : MonoBehaviour
 	private Animator anim;
 	public Camera cam;
 
+	public Animator zoomCameraAnim;
+	private bool zoomed;
+	public GameObject crosshair;
+
 	public int maxAmmo = 30;
 	private int currentAmmo;
 	public int stashAmmo = 30;
@@ -28,7 +32,7 @@ public class PlayerAttack : MonoBehaviour
 
 	private void Awake()
 	{
-		anim = GetComponentInChildren<Animator>();
+		anim = GetComponent<Animator>();
 		currentAmmo = maxAmmo;
 		stashAmmoText.text = stashAmmo.ToString();
 	}
@@ -43,6 +47,7 @@ public class PlayerAttack : MonoBehaviour
 			return;
 		}
 		Shoot();
+		ZoomInAndOut();
 	}
 
 	private void Shoot()
@@ -63,6 +68,20 @@ public class PlayerAttack : MonoBehaviour
 				// damage enemy
 			}
 
+		}
+	}
+
+	private void ZoomInAndOut()
+	{
+		if (Input.GetMouseButtonDown(1))
+		{
+			zoomCameraAnim.Play("ZoomIn");
+			crosshair.SetActive(false);
+		}
+		if (Input.GetMouseButtonUp(1))
+		{
+			zoomCameraAnim.Play("ZoomOut");
+			crosshair.SetActive(true);
 		}
 	}
 

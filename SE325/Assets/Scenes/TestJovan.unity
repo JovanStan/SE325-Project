@@ -1628,6 +1628,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1924985182}
     - target: {fileID: 1029319655, guid: ec233c87a4913c440acb7e6d5d94aeb2, type: 3}
+      propertyPath: crosshair
+      value: 
+      objectReference: {fileID: 2029480540}
+    - target: {fileID: 1029319655, guid: ec233c87a4913c440acb7e6d5d94aeb2, type: 3}
       propertyPath: reloadingText
       value: 
       objectReference: {fileID: 557190446}

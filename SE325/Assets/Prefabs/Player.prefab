@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1419949663573312229}
   - component: {fileID: 976381419}
-  - component: {fileID: 499404415}
   m_Layer: 0
   m_Name: CameraParent
   m_TagString: Untagged
@@ -50,21 +49,6 @@ MonoBehaviour:
   playerRoot: {fileID: 1419949664164628938}
   cameraParent: {fileID: 1419949663573312229}
   sensitivity: 5
---- !u!114 &499404415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1419949663573312228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19689d5b5164f9543a2f74c997f1c511, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zoom: 30
-  normal: 45
-  smooth: 5
 --- !u!1 &1419949664164628932
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,6 +145,7 @@ GameObject:
   - component: {fileID: 1419949664292725623}
   - component: {fileID: 1419949664292725622}
   - component: {fileID: 1419949664292725617}
+  - component: {fileID: 2094954697}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -206,7 +191,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 1000
   field of view: 45
   orthographic: 0
@@ -234,6 +219,27 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1419949664292725616}
   m_Enabled: 1
+--- !u!95 &2094954697
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419949664292725616}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dc3a403a0e1b5844fa8961c71de0536c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1934166905406390336
 GameObject:
   m_ObjectHideFlags: 0
@@ -1806,7 +1812,10 @@ MonoBehaviour:
   fireRate: 15
   damage: 20
   cam: {fileID: 1419949664292725622}
+  zoomCameraAnim: {fileID: 2094954697}
+  crosshair: {fileID: 0}
   maxAmmo: 30
+  stashAmmo: 30
   reloatTime: 1
   currentAmmoText: {fileID: 0}
   stashAmmoText: {fileID: 0}
