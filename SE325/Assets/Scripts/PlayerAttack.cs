@@ -36,7 +36,7 @@ public class PlayerAttack : MonoBehaviour
 	{
 		if (isReloading) return;
 
-		if (currentAmmo <= 0)
+		if (currentAmmo <= 0 && stashAmmo > 0)
 		{
 			StartCoroutine(Reload());
 			return;
@@ -48,7 +48,7 @@ public class PlayerAttack : MonoBehaviour
 
 	private void Shoot()
 	{
-		if (Input.GetMouseButton(0) && Time.time > fireTimer)
+		if (Input.GetMouseButton(0) && Time.time > fireTimer && currentAmmo > 0)
 		{
 			anim.SetTrigger("shoot");
 			fireTimer = Time.time + 1f / fireRate;
