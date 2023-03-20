@@ -7,9 +7,10 @@ public class PlayerStats : MonoBehaviour
 {
     public static PlayerStats instance;
     public int health = 100;
-    private bool isDead;
+    private bool isDead = false;
 
-    public Image healthStats, staminaStats;
+    public Image healthStats, staminaStats, blackScreen;
+
 
 	private void Awake()
 	{
@@ -44,8 +45,9 @@ public class PlayerStats : MonoBehaviour
         health -= dmg;
         DisplayHealth(health);
 
-        if (health < 0)
+        if (health <= 0)
         {
+           
             health = 0;
             PlayerDied();
             isDead = true;
@@ -55,6 +57,7 @@ public class PlayerStats : MonoBehaviour
     private void PlayerDied()
     {
         GetComponent<PlayerController>().enabled = false;
-        GetComponent<PlayerAttack>().enabled = false;
+        GetComponentInChildren<PlayerAttack>().enabled = false;
+        GetComponentInChildren<MouseLook>().enabled = false;
     }
 }

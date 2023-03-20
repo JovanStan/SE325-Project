@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     private float sprintStamina = 100f;
     private float sprintStaminaSpent = 10f;
 
+
     private void Awake()
 	{
 		characterController = GetComponent<CharacterController>();
@@ -110,7 +111,7 @@ public class PlayerController : MonoBehaviour
 				}
 			}
 		}
-	}
+    }
 
     private void Crouch()
     {
