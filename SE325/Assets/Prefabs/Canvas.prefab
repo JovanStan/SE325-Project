@@ -285,15 +285,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f7e5a869304c09443b3519cadc6f6596, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 4f75481549790d949ac315dff03aed85, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -542,8 +542,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 763, y: 159}
-  m_SizeDelta: {x: 50.7052, y: 50}
+  m_AnchoredPosition: {x: 758.60767, y: 159}
+  m_SizeDelta: {x: 59.4899, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5249757352030550926
 CanvasRenderer:
@@ -575,8 +575,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 30
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ac658ed8849173b47b24908e3c30bc7b, type: 2}
-  m_sharedMaterial: {fileID: -4324328960422591505, guid: ac658ed8849173b47b24908e3c30bc7b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e728778b0a9129b459d92dcee326c7f3, type: 2}
+  m_sharedMaterial: {fileID: 2825765949062964086, guid: e728778b0a9129b459d92dcee326c7f3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -712,8 +712,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ac658ed8849173b47b24908e3c30bc7b, type: 2}
-  m_sharedMaterial: {fileID: -4324328960422591505, guid: ac658ed8849173b47b24908e3c30bc7b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e728778b0a9129b459d92dcee326c7f3, type: 2}
+  m_sharedMaterial: {fileID: 2825765949062964086, guid: e728778b0a9129b459d92dcee326c7f3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -847,8 +847,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: /
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ac658ed8849173b47b24908e3c30bc7b, type: 2}
-  m_sharedMaterial: {fileID: -4324328960422591505, guid: ac658ed8849173b47b24908e3c30bc7b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e728778b0a9129b459d92dcee326c7f3, type: 2}
+  m_sharedMaterial: {fileID: 2825765949062964086, guid: e728778b0a9129b459d92dcee326c7f3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
