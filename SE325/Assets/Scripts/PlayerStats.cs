@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -10,11 +11,13 @@ public class PlayerStats : MonoBehaviour
     private bool isDead = false;
 
     public Image healthStats, staminaStats, blackScreen;
+    public TextMeshProUGUI healthText;
 
 
 	private void Awake()
 	{
-		instance = this;
+        healthText.text = health.ToString();
+        instance = this;
 	}
 
 
@@ -43,6 +46,7 @@ public class PlayerStats : MonoBehaviour
         if (isDead) return;
 
         health -= dmg;
+        healthText.text = health.ToString();
         DisplayHealth(health);
 
         if (health <= 0)

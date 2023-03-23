@@ -1936,6 +1936,7 @@ MonoBehaviour:
   healthStats: {fileID: 0}
   staminaStats: {fileID: 0}
   blackScreen: {fileID: 0}
+  healthText: {fileID: 0}
 --- !u!1 &7327866912756223183
 GameObject:
   m_ObjectHideFlags: 0
