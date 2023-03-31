@@ -24,11 +24,15 @@ public class PlayerController : MonoBehaviour
     private float sprintStamina = 100f;
     private float sprintStaminaSpent = 10f;
 
+    public static PlayerController instance;
+
+
 
     private void Awake()
 	{
 		characterController = GetComponent<CharacterController>();
         cameraTransform = transform.GetChild(0);
+        instance = this;
 	}
     
     void Update()
