@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cutscene1.unity
     guid: a9ab603d29711774088580645c72a215
+  - enabled: 1
+    path: Assets/Scenes/TestJovan.unity
+    guid: d479677b41aec4441baa61f44c50d207
   m_configObjects: {}
