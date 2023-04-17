@@ -23,10 +23,10 @@ public class PlayerStats : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+       /* if (Input.GetKeyDown(KeyCode.F))
         {
             ApplyDamage(20);
-        }
+        }*/
     }
 
     public void DisplayHealth(float health)

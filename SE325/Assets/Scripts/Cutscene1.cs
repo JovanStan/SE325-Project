@@ -14,7 +14,7 @@ public class Cutscene1 : MonoBehaviour
 
 	public void PlayGame()
 	{
-		SceneManager.LoadScene("TestJovan");
+		SceneManager.LoadScene("Demo_Scene_02");
 	}
 
 	IEnumerator ShowButton()
