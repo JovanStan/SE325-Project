@@ -10402,7 +10402,6 @@ MonoBehaviour:
   loadingScreen: {fileID: 1970786712}
   mainMenu: {fileID: 1557460994}
   loadingSlider: {fileID: 1978804625}
-  playButton: {fileID: 2052216557}
 --- !u!4 &2132872108
 Transform:
   m_ObjectHideFlags: 0

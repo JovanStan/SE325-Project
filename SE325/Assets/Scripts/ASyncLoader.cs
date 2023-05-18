@@ -6,10 +6,9 @@ using UnityEngine.UI;
 
 public class ASyncLoader : MonoBehaviour
 {
-	[SerializeField] private GameObject loadingScreen, mainMenu;
+	[SerializeField] private GameObject loadingScreen, mainMenu = null;
 
 	[SerializeField] private Slider loadingSlider;
-	[SerializeField] private Button playButton;
 
 
 	public void LoadLevelButton(string levelToLoad)
@@ -30,10 +29,6 @@ public class ASyncLoader : MonoBehaviour
 			loadingSlider.value = progressValue;
 			yield return null;
 
-			if (loadOperation.isDone)
-			{
-				playButton.gameObject.SetActive(true);
-			}
 		}
 	}
 }
