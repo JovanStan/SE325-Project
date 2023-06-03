@@ -30,5 +30,9 @@ public class ASyncLoader : MonoBehaviour
 			yield return null;
 
 		}
+		Time.timeScale = 1.0f;
+		MouseLook.instance.enabled = true;
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
 	}
 }

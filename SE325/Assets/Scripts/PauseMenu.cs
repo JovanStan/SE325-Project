@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject PausePanel;
+    public GameObject PausePanel, exitInfoPanel;
     private bool isActive = false;
 
     void Start()
@@ -34,6 +35,17 @@ public class PauseMenu : MonoBehaviour
             MouseLook.instance.enabled = true;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-        }
+            exitInfoPanel.SetActive(false);
+        } 
+    }
+
+	public void GoToMainMenu()
+	{
+        SceneManager.LoadScene("MainMenu");
+	}
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
