@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     private bool isCrouching = false;
 
     private float sprintStamina = 100f;
-    private float sprintStaminaSpent = 10f;
+    private float sprintStaminaSpent = 5f;
 
     public static PlayerController instance;
 
