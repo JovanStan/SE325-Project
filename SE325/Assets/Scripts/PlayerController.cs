@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     private bool isCrouching = false;
 
     private float sprintStamina = 100f;
-    private float sprintStaminaSpent = 10f;
+    private float sprintStaminaSpent = 5f;
 
     public static PlayerController instance;
 
@@ -126,7 +126,9 @@ public class PlayerController : MonoBehaviour
                 cameraTransform.localPosition = new Vector3(0f, crouchHeight, 0f);
                 speed = crouchSpeed;
                 isCrouching = true;
-            } 
+				PlayerStats.instance.crouchIcon.gameObject.SetActive(true);
+				PlayerStats.instance.standingIcon.gameObject.SetActive(false);
+			} 
         }
 
 		if (Input.GetKeyUp(KeyCode.C))
@@ -136,7 +138,9 @@ public class PlayerController : MonoBehaviour
                 cameraTransform.localPosition = new Vector3(0f, standHeight, 0f);
                 speed = moveSpeed;
                 isCrouching = false;
-            }
+				PlayerStats.instance.crouchIcon.gameObject.SetActive(false);
+				PlayerStats.instance.standingIcon.gameObject.SetActive(true);
+			}
 		}
 
     }
