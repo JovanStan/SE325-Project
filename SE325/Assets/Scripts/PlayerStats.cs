@@ -10,7 +10,7 @@ public class PlayerStats : MonoBehaviour
     public int health = 100;
     private bool isDead = false;
 
-    public Image healthStats, staminaStats, standingIcon, crouchIcon;
+    public Image healthStats, staminaStats, blackScreen;
     public TextMeshProUGUI healthText;
 
 
