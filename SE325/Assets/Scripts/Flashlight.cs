@@ -4,29 +4,32 @@ using UnityEngine;
 
 public class Flashlight : MonoBehaviour
 {
-    private Light flashlight;
-    private bool isActive = false;
-    void Start()
-    {
-        flashlight = GetComponent<Light>();
-    }
+	private Light flashlight;
+	private bool isActive = false;
+	public GameObject flashlightImage;
+	void Start()
+	{
+		flashlight = GetComponent<Light>();
+	}
 
-    
-    void Update()
-    {
+
+	void Update()
+	{
 		if (Input.GetKeyDown(KeyCode.F))
 		{
-            isActive = !isActive;
+			isActive = !isActive;
 		}
 
 		if (isActive)
 		{
-            flashlight.intensity = 1.36f;
+			flashlight.intensity = 10f;
+			flashlightImage.SetActive(true);
 		}
 
 		if (!isActive)
 		{
-            flashlight.intensity = 0f;
+			flashlight.intensity = 0f;
+			flashlightImage.SetActive(false);
 		}
-    }
+	}
 }
