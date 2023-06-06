@@ -71,25 +71,27 @@ public class Enemy : MonoBehaviour
     //public GameObject gm;
     //private GameGM gmScript;
 
-    //[Header("Audio")]
-    //public AudioClip detectedSFX;
-    //public AudioClip distractedSFX;
-    //public AudioClip hurtSFX;
-    //public AudioClip lostSFX;
-    //public AudioClip playerHurtSound;
-    //private bool playedSoundDistracted = false;
-    //private bool playedSoundDetected = false;
+    [Header("Audio")]
+    public AudioClip detectedSFX;
+    public AudioClip distractedSFX;
+    public AudioClip hurtSFX;
+    public AudioClip lostSFX;
+    public AudioClip playerHurtSound;
+    private bool playedSoundDistracted = false;
+    private bool playedSoundDetected = false;
 
     //[Header("UI")]
     //public GameObject hurtPanel;
     //private Image hurtImage;
     //public byte hurtValueMax = 235;
 
+    private bool isDead = false;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         animController = GetComponentInChildren<Animator>();
-        //audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
         playerScript = player.GetComponent<PlayerStats>();
         playerStatus = player.GetComponent<PlayerController>();
         //gmScript = gm.GetComponent<GameGM>();
@@ -207,11 +209,11 @@ public class Enemy : MonoBehaviour
     private void Pursue()
     {
         // Sound
-        //if (!playedSoundDetected)
-        //{
-        //    playedSoundDetected = true;
-        //    audioSource.PlayOneShot(detectedSFX);
-        //}
+        if (!playedSoundDetected)
+        {
+            playedSoundDetected = true;
+            audioSource.PlayOneShot(detectedSFX);
+        }
 
         Vector3 direction = (player.transform.position - transform.position).normalized;
         StartCoroutine(DetectionTimer());
@@ -291,9 +293,9 @@ public class Enemy : MonoBehaviour
         else if (detectionTimeCurrent < 0 && searchedLastPosition)
         {
             // Sound
-            //audioSource.PlayOneShot(lostSFX);
-            //playedSoundDetected = false;
-            //playedSoundDistracted = false;
+            audioSource.PlayOneShot(lostSFX);
+            playedSoundDetected = false;
+            playedSoundDistracted = false;
             // Enemy is walking during patrol
             animController.SetBool("alarmed", false);
             agent.speed = patrolSpeed;
@@ -327,11 +329,11 @@ public class Enemy : MonoBehaviour
     private void Distracted()
     {
         // Sound
-        //if (!playedSoundDistracted)
-        //{
-        //    playedSoundDistracted = true;
-        //    audioSource.PlayOneShot(distractedSFX);
-        //}
+        if (!playedSoundDistracted)
+        {
+            playedSoundDistracted = true;
+            audioSource.PlayOneShot(distractedSFX);
+        }
 
         agent.destination = distractionPosition;
 
@@ -385,7 +387,7 @@ public class Enemy : MonoBehaviour
             animController.SetTrigger("attack");
 
             // Audio effects
-            //audioSource.PlayOneShot(playerHurtSound);
+            audioSource.PlayOneShot(playerHurtSound);
 
             // UI effects
             //Color32 org = hurtImage.color;
@@ -436,7 +438,7 @@ public class Enemy : MonoBehaviour
         currentState = States.PURSUE;
         detectionTimeCurrent = detectionTime;
 
-        //audioSource.PlayOneShot(hurtSFX);
+        audioSource.PlayOneShot(hurtSFX);
 
         // Debug
         //Debug.Log("HitByDistraction got called by " + gameObject.name);
@@ -446,8 +448,17 @@ public class Enemy : MonoBehaviour
     {
         health -= value;
 
-        if (health <= 0)
+        if (health <= 0 && !isDead)
+        {
+            // Audio
+            audioSource.PlayOneShot(hurtSFX);
+            // Delete object
+            isDead = true;
+            DeathDelay();
+        }
+        else if (health <= 0 && isDead)
             Destroy(gameObject);
+            
     }
 
     private void OnDrawGizmosSelected()
@@ -491,6 +502,11 @@ public class Enemy : MonoBehaviour
             currentState = States.PATROL;
         else
             currentState = States.GUARD;
+    }
+
+    private IEnumerator DeathDelay()
+    {
+        yield return new WaitForSeconds(1);
     }
 
     /*
