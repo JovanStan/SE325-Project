@@ -442,6 +442,14 @@ public class Enemy : MonoBehaviour
         //Debug.Log("HitByDistraction got called by " + gameObject.name);
     }
 
+    public void TakeDamage(int value)
+    {
+        health -= value;
+
+        if (health <= 0)
+            Destroy(gameObject);
+    }
+
     private void OnDrawGizmosSelected()
     {
         // Sound radius

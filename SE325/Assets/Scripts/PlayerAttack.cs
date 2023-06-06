@@ -7,7 +7,7 @@ public class PlayerAttack : MonoBehaviour
 {
 	public float fireRate = 15f;
 	private float fireTimer;
-	public float damage = 20f;
+	public int damage = 20;
 
 	private Animator anim;
 	public Camera cam;
@@ -62,6 +62,11 @@ public class PlayerAttack : MonoBehaviour
 				Debug.Log(hit.transform.gameObject.name);
 
 				// damage enemy
+				if(hit.transform.gameObject.name == "Enemy")
+                {
+					Enemy e = hit.transform.gameObject.GetComponent<Enemy>();
+					e.TakeDamage(damage);
+                }
 			}
 
 		}
