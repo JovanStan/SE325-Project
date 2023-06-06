@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     private Transform cameraTransform;
     private float standHeight = 1.6f;
     private float crouchHeight = 1f;
-    private bool isCrouching = false;
+    public bool isCrouching = false;
 
     private float sprintStamina = 100f;
     private float sprintStaminaSpent = 5f;
