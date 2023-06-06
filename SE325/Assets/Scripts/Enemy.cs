@@ -89,7 +89,7 @@ public class Enemy : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         animController = GetComponentInChildren<Animator>();
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
         playerScript = player.GetComponent<PlayerStats>();
         playerStatus = player.GetComponent<PlayerController>();
         //gmScript = gm.GetComponent<GameGM>();
