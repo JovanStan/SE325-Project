@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class GM : MonoBehaviour
 {
@@ -13,6 +15,9 @@ public class GM : MonoBehaviour
     public bool fourthObjectiveCompleted = false;
 
     [Header("Objective Texts")]
+    public TMP_Text questText;
+    public TMP_Text conversationText;
+    public GameObject conversationPanel;
     public string firstObjectiveText = "Find and talk to a police officer nearby to learn more about the local situation.";
     public string secondObjectiveText = "Clear the area surrounding the house of enemy soldiers.";
     public string thirdObjectiveText = "Return to the police officer.";
@@ -21,6 +26,7 @@ public class GM : MonoBehaviour
     void Start()
     {
         currentObjectiveText = firstObjectiveText;
+        questText.text = currentObjectiveText;
     }
 
     void Update()
@@ -32,6 +38,12 @@ public class GM : MonoBehaviour
     {
         firstObjectiveCompleted = true;
         currentObjectiveText = secondObjectiveText;
+        questText.text = currentObjectiveText;
+
+        // Conversation
+        conversationPanel.SetActive(true);
+        conversationText.text = "Liuetenant, a moment of your time please. The regional government house has been taken by hostile forces, and we need it if we are to mount any resistance in this area. Would you help us?";
+        StartCoroutine(ConversationToggle());
     }
 
     public void EnemyKilled()
@@ -45,18 +57,33 @@ public class GM : MonoBehaviour
     {
         secondObjectiveCompleted = true;
         currentObjectiveText = thirdObjectiveText;
+        questText.text = currentObjectiveText;
     }
 
     public void ThirdObjectiveDone()
     {
         thirdObjectiveCompleted = true;
         currentObjectiveText = fourthObjectiveText;
+        questText.text = currentObjectiveText;
+
+        // Conversation
+        conversationPanel.SetActive(true);
+        conversationText.text = "Thank you for your help liuetenant Dubois. I know you are trying to get to friendly territory, and I think I can help you. Talk to my colleague who is stationed by a campfire to the west.";
+        StartCoroutine(ConversationToggle());
     }
 
     public void FourthObjectiveDone()
     {
         fourthObjectiveCompleted = true;
         currentObjectiveText = "";
+        questText.text = currentObjectiveText;
         // win screen
+    }
+
+    private IEnumerator ConversationToggle()
+    {
+        yield return new WaitForSeconds(10);
+
+        conversationPanel.SetActive(false);
     }
 }
