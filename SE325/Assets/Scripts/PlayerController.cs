@@ -106,7 +106,7 @@ public class PlayerController : MonoBehaviour
 		{
             if(sprintStamina != 100f)
 			{
-                sprintStamina += (sprintStaminaSpent / 2) * Time.deltaTime;
+                sprintStamina += (sprintStaminaSpent) * Time.deltaTime;
                 PlayerStats.instance.DisplayStamina(sprintStamina);
 
                 if(sprintStamina > 100f)
