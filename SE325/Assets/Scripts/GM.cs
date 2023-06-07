@@ -27,4 +27,36 @@ public class GM : MonoBehaviour
     {
         
     }
+
+    public void FirstObjectiveDone()
+    {
+        firstObjectiveCompleted = true;
+        currentObjectiveText = secondObjectiveText;
+    }
+
+    public void EnemyKilled()
+    {
+        enemiesKilled++;
+        if (enemiesKilled >= 5)
+            SecondObjectiveDone();
+    }
+
+    private void SecondObjectiveDone()
+    {
+        secondObjectiveCompleted = true;
+        currentObjectiveText = thirdObjectiveText;
+    }
+
+    public void ThirdObjectiveDone()
+    {
+        thirdObjectiveCompleted = true;
+        currentObjectiveText = fourthObjectiveText;
+    }
+
+    public void FourthObjectiveDone()
+    {
+        fourthObjectiveCompleted = true;
+        currentObjectiveText = "";
+        // win screen
+    }
 }

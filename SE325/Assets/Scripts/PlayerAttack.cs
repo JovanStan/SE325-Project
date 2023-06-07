@@ -11,6 +11,8 @@ public class PlayerAttack : MonoBehaviour
 
 	private Animator anim;
 	public Camera cam;
+	public GameObject GMObject;
+	private GM gm;
 
 	public Animator zoomCameraAnim;
 	private bool zoomed;
@@ -24,8 +26,13 @@ public class PlayerAttack : MonoBehaviour
 
 	public TextMeshProUGUI currentAmmoText, stashAmmoText;
 
+    private void Start()
+    {
+		gm = GMObject.GetComponent<GM>();
+    }
 
-	private void Awake()
+
+    private void Awake()
 	{
 		anim = GetComponent<Animator>();
 		currentAmmo = maxAmmo;
@@ -44,6 +51,7 @@ public class PlayerAttack : MonoBehaviour
 
 		Shoot();
 		ZoomInAndOut();
+		Interact();
 	}
 
 	private void Shoot()
@@ -62,7 +70,7 @@ public class PlayerAttack : MonoBehaviour
 				Debug.Log(hit.transform.gameObject.name);
 
 				// damage enemy
-				if(hit.transform.gameObject.name == "Enemy")
+				if(hit.transform.gameObject.tag == "Hostile")
                 {
 					Enemy e = hit.transform.gameObject.GetComponent<Enemy>();
 					e.TakeDamage(damage);
@@ -71,6 +79,38 @@ public class PlayerAttack : MonoBehaviour
 
 		}
 	}
+
+	private void Interact()
+    {
+        if (Input.GetKey(KeyCode.E))
+        {
+			RaycastHit hit;
+			if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit))
+			{
+				Debug.Log("Interacted with " + hit.transform.gameObject.name);
+
+				// interact with quest giver
+				if (hit.transform.gameObject.name == "NPC")
+				{
+                    if (!gm.firstObjectiveCompleted)
+                    {
+						gm.FirstObjectiveDone();
+                    }
+					else if(gm.firstObjectiveCompleted && gm.secondObjectiveCompleted)
+                    {
+						gm.ThirdObjectiveDone();
+                    }
+				}
+
+				// interact with second quest giver
+				if(hit.transform.gameObject.name == "John")
+                {
+					if (gm.thirdObjectiveCompleted)
+						gm.FourthObjectiveDone();
+                }
+			}
+		}
+    }
 
 	private void ZoomInAndOut()
 	{

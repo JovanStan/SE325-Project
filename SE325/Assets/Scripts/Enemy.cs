@@ -67,9 +67,9 @@ public class Enemy : MonoBehaviour
     public Vector3 distractionPosition;
     public bool isDistracted = false;
 
-    //[Header("GM")]
-    //public GameObject gm;
-    //private GameGM gmScript;
+    [Header("GM")]
+    public GameObject gm;
+    private GM gmScript;
 
     [Header("Audio")]
     public AudioClip detectedSFX;
@@ -94,7 +94,7 @@ public class Enemy : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         playerScript = player.GetComponent<PlayerStats>();
         playerStatus = player.GetComponent<PlayerController>();
-        //gmScript = gm.GetComponent<GameGM>();
+        gmScript = gm.GetComponent<GM>();
 
         isDistracted = false;
 
@@ -126,7 +126,7 @@ public class Enemy : MonoBehaviour
 
         // Detection by sound
         float distance = Vector3.Distance(player.transform.position, transform.position);
-        if (distance <= soundDetectionRadius && !playerStatus.isCrouching)
+        if (distance <= soundDetectionRadius && !playerStatus.isCrouching && playerStatus.isMoving)
         {
             if (currentState != States.FLEE)
                 currentState = States.PURSUE;
@@ -224,7 +224,7 @@ public class Enemy : MonoBehaviour
 
         // Detection by sound
         float distance = Vector3.Distance(player.transform.position, transform.position);
-        if (distance <= soundDetectionRadius && !playerStatus.isCrouching)
+        if (distance <= soundDetectionRadius && !playerStatus.isCrouching && playerStatus.isMoving)
         {
             // Keep record of players last position and move to him
             lastPosition = player.transform.position;
@@ -453,6 +453,7 @@ public class Enemy : MonoBehaviour
             // Audio
             audioSource.PlayOneShot(hurtSFX);
             // Delete object
+            gmScript.EnemyKilled();
             isDead = true;
             DeathDelay();
         }

@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     private CharacterController characterController;
     private Vector3 moveDirection;
     public float speed = 5f;
+    public bool isMoving = false;
 
     private float gravity = 20f;
     public float jumpForce = 10f;
@@ -54,6 +55,15 @@ public class PlayerController : MonoBehaviour
         ApplyGravity();
 
         characterController.Move(moveDirection);
+
+        if(characterController.velocity.magnitude > 0)
+        {
+            isMoving = true;
+        }
+        else
+        {
+            isMoving = false;
+        }
 	}
 
     private void ApplyGravity()
