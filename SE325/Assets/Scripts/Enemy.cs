@@ -170,7 +170,7 @@ public class Enemy : MonoBehaviour
     private void Guard()
     {
         // Sound
-        //playedSoundDistracted = false;
+        playedSoundDistracted = false;
 
         // Enemy is not Alarmed so he will walk
         animController.SetBool("alarmed", false);
