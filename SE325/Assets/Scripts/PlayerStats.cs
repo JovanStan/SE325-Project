@@ -13,6 +13,10 @@ public class PlayerStats : MonoBehaviour
     public Image healthStats, staminaStats, standingIcon, crouchIcon;
     public TextMeshProUGUI healthText;
 
+    [Header("Cameras")]
+    public GameObject normalCamera;
+    public GameObject deathCamera;
+
 
 	private void Awake()
 	{
@@ -63,5 +67,11 @@ public class PlayerStats : MonoBehaviour
         GetComponent<PlayerController>().enabled = false;
         GetComponentInChildren<PlayerAttack>().enabled = false;
         GetComponentInChildren<MouseLook>().enabled = false;
+
+        deathCamera.SetActive(true);
+        deathCamera.transform.position = normalCamera.transform.position;
+        deathCamera.transform.rotation = normalCamera.transform.rotation;
+        normalCamera.SetActive(false);
+        
     }
 }

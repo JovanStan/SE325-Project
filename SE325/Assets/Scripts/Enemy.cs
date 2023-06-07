@@ -86,6 +86,7 @@ public class Enemy : MonoBehaviour
     //public byte hurtValueMax = 235;
 
     private bool isDead = false;
+    private bool stopActivity = false;
 
     void Start()
     {
@@ -110,6 +111,9 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        if (stopActivity)
+            return;
+
         StartCoroutine(AttackTimer());
 
         // Checking Enemy velocity for Animations
@@ -448,6 +452,9 @@ public class Enemy : MonoBehaviour
     {
         health -= value;
 
+        detectionTimeCurrent = detectionTime;
+        currentState = States.PURSUE;
+
         if (health <= 0 && !isDead)
         {
             // Audio
@@ -458,8 +465,11 @@ public class Enemy : MonoBehaviour
             DeathDelay();
         }
         else if (health <= 0 && isDead)
+        {
+            //animController.SetBool("dead", true);
+            //stopActivity = true;
             Destroy(gameObject);
-            
+        }    
     }
 
     private void OnDrawGizmosSelected()
