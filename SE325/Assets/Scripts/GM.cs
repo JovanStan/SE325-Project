@@ -23,6 +23,10 @@ public class GM : MonoBehaviour
     public string thirdObjectiveText = "Return to the police officer.";
     public string fourthObjectiveText = "Head towards the location the officer told you about in order to escape.";
 
+
+    public GameObject npc, player, interactionText;
+
+
     void Start()
     {
         currentObjectiveText = firstObjectiveText;
@@ -31,13 +35,21 @@ public class GM : MonoBehaviour
 
     void Update()
     {
-        
+        float distance = Vector3.Distance(player.transform.position, npc.transform.position);
+        if(distance <= 5f && !firstObjectiveCompleted)
+        {
+            interactionText.SetActive(true);
+        }
+        else
+        {
+            interactionText.SetActive(false);
+        }
     }
 
     public void FirstObjectiveDone()
     {
         firstObjectiveCompleted = true;
-        currentObjectiveText = secondObjectiveText;
+		currentObjectiveText = secondObjectiveText;
         questText.text = currentObjectiveText;
 
         // Conversation

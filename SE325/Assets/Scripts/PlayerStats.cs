@@ -17,6 +17,8 @@ public class PlayerStats : MonoBehaviour
     public GameObject normalCamera;
     public GameObject deathCamera;
 
+    public Image deathPanel;
+
 
 	private void Awake()
 	{
@@ -55,10 +57,13 @@ public class PlayerStats : MonoBehaviour
 
         if (health <= 0)
         {
-           
-            health = 0;
+			Time.timeScale = 0f;
+			deathPanel.color = new Color(deathPanel.color.r, deathPanel.color.g, deathPanel.color.b,
+					Mathf.MoveTowards(deathPanel.color.a, 0f, 2f * Time.deltaTime));
+			health = 0;
             PlayerDied();
             isDead = true;
+
         }
     }
 
@@ -72,6 +77,10 @@ public class PlayerStats : MonoBehaviour
         deathCamera.transform.position = normalCamera.transform.position;
         deathCamera.transform.rotation = normalCamera.transform.rotation;
         normalCamera.SetActive(false);
-        
-    }
+
+		Cursor.lockState = CursorLockMode.None;
+		Cursor.visible = true;
+		deathPanel.gameObject.SetActive(true);
+
+	}
 }
