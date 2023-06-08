@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class PlayerStats : MonoBehaviour
     public GameObject normalCamera;
     public GameObject deathCamera;
 
-    public Image deathPanel;
+    public CanvasGroup deathPanel;
 
 
 	private void Awake()
@@ -29,10 +30,19 @@ public class PlayerStats : MonoBehaviour
 
     private void Update()
     {
-       /* if (Input.GetKeyDown(KeyCode.F))
+       if (Input.GetKeyDown(KeyCode.F))
         {
-            ApplyDamage(20);
-        }*/
+            ApplyDamage(50);
+        }
+
+        if (isDead)
+        {
+			deathPanel.alpha += Time.deltaTime / 3;
+			if (Input.GetKeyDown(KeyCode.R)) 
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+        }
     }
 
     public void DisplayHealth(float health)
@@ -57,30 +67,25 @@ public class PlayerStats : MonoBehaviour
 
         if (health <= 0)
         {
-			Time.timeScale = 0f;
-			deathPanel.color = new Color(deathPanel.color.r, deathPanel.color.g, deathPanel.color.b,
-					Mathf.MoveTowards(deathPanel.color.a, 0f, 2f * Time.deltaTime));
 			health = 0;
             PlayerDied();
-            isDead = true;
 
         }
     }
 
     private void PlayerDied()
     {
-        GetComponent<PlayerController>().enabled = false;
-        GetComponentInChildren<PlayerAttack>().enabled = false;
-        GetComponentInChildren<MouseLook>().enabled = false;
+		deathPanel.gameObject.SetActive(true);
+		isDead = true;
 
-        deathCamera.SetActive(true);
+		deathCamera.SetActive(true);
         deathCamera.transform.position = normalCamera.transform.position;
         deathCamera.transform.rotation = normalCamera.transform.rotation;
         normalCamera.SetActive(false);
 
-		Cursor.lockState = CursorLockMode.None;
-		Cursor.visible = true;
-		deathPanel.gameObject.SetActive(true);
+		GetComponent<PlayerController>().enabled = false;
+		GetComponentInChildren<PlayerAttack>().enabled = false;
+		GetComponentInChildren<MouseLook>().enabled = false;
 
 	}
 }

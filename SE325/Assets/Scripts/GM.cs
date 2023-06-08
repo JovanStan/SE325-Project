@@ -6,6 +6,7 @@ using TMPro;
 
 public class GM : MonoBehaviour
 {
+    public static GM instance;
     public string currentObjectiveText;
     public int enemiesKilled = 0;
     [Header("Objective Checks")]
@@ -27,7 +28,12 @@ public class GM : MonoBehaviour
     public GameObject npc, player, interactionText;
 
 
-    void Start()
+	private void Awake()
+	{
+		instance = this;
+	}
+
+	void Start()
     {
         currentObjectiveText = firstObjectiveText;
         questText.text = currentObjectiveText;
@@ -36,7 +42,7 @@ public class GM : MonoBehaviour
     void Update()
     {
         float distance = Vector3.Distance(player.transform.position, npc.transform.position);
-        if(distance <= 5f && !firstObjectiveCompleted)
+        if(distance <= 2f && !firstObjectiveCompleted)
         {
             interactionText.SetActive(true);
         }

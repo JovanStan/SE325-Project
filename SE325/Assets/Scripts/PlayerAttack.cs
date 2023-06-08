@@ -11,8 +11,8 @@ public class PlayerAttack : MonoBehaviour
 
 	private Animator anim;
 	public Camera cam;
-	public GameObject GMObject;
-	private GM gm;
+	//public GameObject GMObject;
+	//private GM gm;
 
 	public Animator zoomCameraAnim;
 	private bool zoomed;
@@ -28,7 +28,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void Start()
     {
-		gm = GMObject.GetComponent<GM>();
+		//gm = GMObject.GetComponent<GM>();
     }
 
 
@@ -92,21 +92,21 @@ public class PlayerAttack : MonoBehaviour
 				// interact with quest giver
 				if (hit.transform.gameObject.name == "NPC")
 				{
-                    if (!gm.firstObjectiveCompleted)
+                    if (!GM.instance.firstObjectiveCompleted)
                     {
-						gm.FirstObjectiveDone();
+						GM.instance.FirstObjectiveDone();
                     }
-					else if(gm.firstObjectiveCompleted && gm.secondObjectiveCompleted)
+					else if(GM.instance.firstObjectiveCompleted && GM.instance.secondObjectiveCompleted)
                     {
-						gm.ThirdObjectiveDone();
+						GM.instance.ThirdObjectiveDone();
                     }
 				}
 
 				// interact with second quest giver
 				if(hit.transform.gameObject.name == "John")
                 {
-					if (gm.thirdObjectiveCompleted)
-						gm.FourthObjectiveDone();
+					if (GM.instance.thirdObjectiveCompleted)
+						GM.instance.FourthObjectiveDone();
                 }
 			}
 		}
