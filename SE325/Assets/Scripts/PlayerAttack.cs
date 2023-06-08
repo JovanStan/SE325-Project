@@ -5,6 +5,7 @@ using TMPro;
 
 public class PlayerAttack : MonoBehaviour
 {
+	public AudioForPlayer audio;
 	public float fireRate = 15f;
 	private float fireTimer;
 	public int damage = 20;
@@ -46,7 +47,9 @@ public class PlayerAttack : MonoBehaviour
 		if (currentAmmo <= 0 && stashAmmo > 0)
 		{
 			StartCoroutine(Reload());
-			return;
+			
+            audio.playReloadSound();
+            return;
 		}
 
 		Shoot();
@@ -128,6 +131,7 @@ public class PlayerAttack : MonoBehaviour
 
 	IEnumerator Reload()
 	{
+		
 		isReloading = true;
 		anim.SetTrigger("reload");
 		yield return new WaitForSeconds(2f);

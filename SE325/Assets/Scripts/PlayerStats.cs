@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
+    
     public static PlayerStats instance;
     public int health = 100;
     private bool isDead = false;
@@ -33,6 +34,7 @@ public class PlayerStats : MonoBehaviour
        if (Input.GetKeyDown(KeyCode.F))
         {
             ApplyDamage(50);
+            
         }
 
         if (isDead)
@@ -69,6 +71,7 @@ public class PlayerStats : MonoBehaviour
         {
 			health = 0;
             PlayerDied();
+         
 
         }
     }
@@ -83,9 +86,13 @@ public class PlayerStats : MonoBehaviour
         deathCamera.transform.rotation = normalCamera.transform.rotation;
         normalCamera.SetActive(false);
 
+
+        GetComponent<AudioForPlayer>().playDeathSound();
 		GetComponent<PlayerController>().enabled = false;
 		GetComponentInChildren<PlayerAttack>().enabled = false;
 		GetComponentInChildren<MouseLook>().enabled = false;
+
+       
 
 	}
 }
