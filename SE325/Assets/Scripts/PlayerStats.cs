@@ -31,11 +31,6 @@ public class PlayerStats : MonoBehaviour
 
     private void Update()
     {
-       if (Input.GetKeyDown(KeyCode.F))
-        {
-            ApplyDamage(50);
-            
-        }
 
         if (isDead)
         {
