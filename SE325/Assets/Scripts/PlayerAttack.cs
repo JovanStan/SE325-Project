@@ -150,7 +150,7 @@ public class PlayerAttack : MonoBehaviour
 				Debug.Log("Nema Vise");
 			}
 
-
+			anim.SetTrigger("idle");
 			isReloading = false;
 		}
 
